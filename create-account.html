@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" translate="no">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+                viewport-fit=cover, interactive-widget=resizes-content"/>
+    <meta name="color-scheme" content="only light"/>
+    <meta name="theme-color" content="#f8f9fa"/>
+    <meta name="referrer" content="strict-origin-when-cross-origin"/>
+    <meta name="description" content="Create a new account."/>
+    <!-- PWA -->
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <link rel="icon" type="image/png" href="/img/trademark.png"/>
+    <title>Create Account Form</title>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/pages/create-account.ts"></script>
+  </head>
+  <body>
+
+  <!--Main Section-->
+  <main>
+
+    <!--First Section-->
+    <section>
+      <div class="control">
+        <div class="container">
+          <div class="content">
+            <div class="wrap">
+              <form class="contact" autocomplete="on" aria-labelledby="create-account-heading" aria-describedby="create-account-description" novalidate>
+                <div class="info">
+                  <header>
+                    <h1 id="create-account-heading">Start your journey.</h1>
+                    <p id="create-account-description">One account. Everything you need.</p>
+                  </header>
+
+                  <div class="click">
+                    <label for="first-name">First Name <small class="vital" aria-hidden="true">*</small></label>
+                    <input type="text" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s\-']+" id="first-name" name="first-name" minlength="2" maxlength="100"
+                          placeholder=" " autocomplete="given-name"
+                          aria-describedby="firstname-hint firstname-error firstname-success" required>
+                    <small id="firstname-hint" class="clue">e.g. Juan</small>
+                    <small id="firstname-error" class="error" aria-live="polite">Letters, hyphens, or apostrophes only.</small>
+                    <small id="firstname-success" class="success" aria-live="polite">First name confirmed.</small>
+                  </div>
+
+                  <div class="click">
+                    <label for="last-name">Last Name <small class="vital" aria-hidden="true">*</small></label>
+                    <input type="text" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s\-']+" id="last-name" name="last-name" minlength="2" maxlength="100"
+                          placeholder=" " autocomplete="family-name"
+                          aria-describedby="lastname-hint lastname-error lastname-success" required>
+                    <small id="lastname-hint" class="clue">e.g. dela Cruz</small>
+                    <small id="lastname-error" class="error" aria-live="polite">Please check your last name.</small>
+                    <small id="lastname-success" class="success" aria-live="polite">Last name looks good.</small>
+                  </div>
+
+                  <div class="click">
+                    <label for="email">Email <small class="vital" aria-hidden="true">*</small></label>
+                    <input type="email" id="email" name="email" placeholder=" " autocomplete="email"
+                          aria-describedby="email-error email-success" required>
+                    <small id="email-error" class="error" aria-live="polite">Invalid email address.</small>
+                    <small id="email-success" class="success" aria-live="polite">That email works.</small>
+                  </div>
+
+                  <div class="click">
+                    <label for="password">Password <small class="vital" aria-hidden="true">*</small></label>
+                    <input type="password" id="password" name="password" minlength="8" placeholder=" " autocomplete="new-password"
+                          pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$"
+                          aria-describedby="password-hint password-error password-success" required>
+                    <small id="password-hint" class="clue">8+ chars · A-z · 0-9 · !@#$</small>
+                    <small id="password-error" class="error" aria-live="polite">Password doesn't meet requirements.</small>
+                    <small id="password-success" class="success" aria-live="polite">Password accepted.</small>
+                  </div>
+
+                  <div class="save solo">
+                    <label for="show">
+                      <input type="checkbox" id="show" name="show" aria-label="Show password">
+                    </label>
+                  </div>
+
+                  <div class="click">
+                    <button type="submit">Get started</button>
+                  </div>
+
+                  <div class="login">
+                    <span aria-hidden="true">Been here before?</span>
+                    <a href="index.html">Welcome back.</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="wrap">
+              <div class="here">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+   
+  </body>
+</html>
